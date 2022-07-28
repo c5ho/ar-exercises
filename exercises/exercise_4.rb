@@ -21,3 +21,6 @@ Yaletown_store = Store.create(name: "Yaletown", annual_revenue: 430000, mens_app
 }
 
 # can also do: Store.where(womens_apparel: true, annual_revenue: ..1000000)
+
+
+@store6 = Store.find_by(id: 6)

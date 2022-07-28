@@ -9,9 +9,13 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
+print "----------> Enter store name (try one character): "
 store_name = gets.chomp
 new_store = Store.create(name: store_name)
-puts new_store.errors.full_messages
+puts "----------> Error message: ", new_store.errors.full_messages
 
 new_employee = @store1.employees.create(first_name: "Calvin")
-puts new_employee.errors.details
+puts "----------> Error details: ", new_employee.errors.details
+
+Toronto_store = Store.create(name: "Toronto", annual_revenue: 430000, mens_apparel: false, womens_apparel: false)
+puts "----------> Error message: ", Toronto_store.errors.full_messages
